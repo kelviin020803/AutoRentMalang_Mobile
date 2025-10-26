@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'daftar_mobil.dart';
-import 'animasi_implisit.dart';
-import 'animasi_eksplisit.dart';
+import 'daftar_mobil_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,46 +32,28 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 40),
             ElevatedButton.icon(
               icon: const Icon(Icons.list),
-              label: const Text("Lihat Daftar Mobil"),
+              label: const Text("Lihat Daftar Mobil (HTTP)"),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
               ),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const DaftarMobilPage()),
+                  MaterialPageRoute(builder: (_) => const DaftarMobilPage(useDio: false)),
                 );
               },
             ),
             const SizedBox(height: 15),
             ElevatedButton.icon(
-              icon: const Icon(Icons.auto_awesome),
-              label: const Text("Contoh Animasi Implisit"),
+              icon: const Icon(Icons.cloud_sync),
+              label: const Text("Lihat Daftar Mobil (Dio)"),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
               ),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (_) => const AnimasiImplisitPage(),
-                  ),
-                );
-              },
-            ),
-            const SizedBox(height: 15),
-            ElevatedButton.icon(
-              icon: const Icon(Icons.flash_on),
-              label: const Text("Contoh Animasi Eksplisit"),
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(double.infinity, 50),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const AnimasiEksplisitPage(),
-                  ),
+                  MaterialPageRoute(builder: (_) => const DaftarMobilPage(useDio: true)),
                 );
               },
             ),
