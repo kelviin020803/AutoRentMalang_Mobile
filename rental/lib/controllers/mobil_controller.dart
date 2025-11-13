@@ -23,7 +23,7 @@ class MobilController extends GetxController {
     }
   }
 
-  // fetch using dio + callback chaining
+  // fetch using dio +
   Future<void> fetchWithDio() async {
     loading.value = true;
     error.value = '';
