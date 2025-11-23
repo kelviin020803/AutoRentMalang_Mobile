@@ -1,0 +1,20 @@
+name: rental_mobil_modul3_kevin
+description: Rental Mobil app for Modul 3 - API Call & Async Handling demo
+publish_to: "none"
+version: 1.0.0
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.5
+  http: ^0.13.6
+  dio: ^5.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
